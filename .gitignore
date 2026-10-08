@@ -1,0 +1,9 @@
+# build artifacts
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+fetcher-crash.txt
+fetcher-config.json
+*.log
