@@ -25,6 +25,13 @@
 - 界面深色主题（#1e1f24 系）；单实例互斥（CreateMutexW）
 - token 仅存内存不落盘；下载默认存系统下载目录（SHGetKnownFolderPath 自适应）
 
+## 机器层（repo-kit · link-only）
+
+- `schema/taxonomy.json` + `schema/kit.lock.json`（kit `2.9.0` / 规范 `2.1.4` / `link-only`）+ `tools/repo-kit/check_repo.py`
+- 校验：`python tools/repo-kit/check_repo.py --root .`；锁哈希：`pwsh tools/update-repo-kit.ps1 -Check`
+- 只查**链接与锚点**：全仓 md 豁免 frontmatter（本仓没有 frontmatter 契约）
+- `schema/kit.lock.json` **不要手改**，升级只能跑 `tools/update-repo-kit.ps1`
+
 ## 常用命令
 
 - 构建：`pyinstaller --onefile --noconsole --name gh-fetcher gh-fetcher.py`

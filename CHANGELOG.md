@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-11-18 · 文档维护：接入 repo-kit 机器层（link-only）
+
+- `schema/taxonomy.json` + `schema/kit.lock.json`（kit `2.9.0` / 规范 `2.1.4` / `link-only`）+ `tools/repo-kit/check_repo.py`
+- `.github/workflows/repo-check.yml`：md / `schema/**` / `tools/**` 变更时跑链接与锚点检查 + 锁哈希校验
+- 只改文档基建，不动产品代码；验收 `REPO CHECK: PASS`（ERROR=0、WARN=0）、`KIT LOCK: PASS`
+
 ## v1.0.0 · 2026-10-08
 
 首发版本。
